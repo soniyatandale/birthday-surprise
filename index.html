@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Susu 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+    <audio id="birthdayMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- PAGE 1 -->
+    <section class="page intro-page active" id="page1">
+
+        <div class="stars">✦ · ✧ · ✦ · ✧ · ✦</div>
+
+        <div class="intro-content">
+
+            <p class="small-text">
+                a little surprise for
+            </p>
+
+            <h1>Susu</h1>
+
+            <p class="intro-message">
+                someone very special deserves<br>
+                something very special ♡
+            </p>
+
+            <button class="main-button" onclick="startBirthday()">
+                ♫ &nbsp; Play Music
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section class="page birthday-page" id="page2">
+
+        <div class="lights">
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+        </div>
+
+        <div class="birthday-content">
+
+            <p class="small-text">
+                today is your special day
+            </p>
+
+            <h2>Happy Birthday</h2>
+
+            <h3>Susu 🩷</h3>
+
+            <div class="cake" id="cake">
+
+                <div class="flames">
+                    🕯️ 🕯️ 🕯️
+                </div>
+
+                <div class="cake-emoji">
+                    🎂
+                </div>
+
+            </div>
+
+            <button class="main-button" onclick="blowCandles()">
+                ✨ Blow the Candles
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section class="page surprise-page" id="page3">
+
+        <div class="surprise-card">
+
+            <div class="teddy">
+                🧸
+            </div>
+
+            <p class="small-text">
+                meanwhile...
+            </p>
+
+            <h2>the surprise</h2>
+
+            <div class="letter-icon">
+                💌
+            </div>
+
+            <h3>
+                Happy Birthday, Susu! 🧸
+            </h3>
+
+            <p>
+                Today is all about celebrating<br>
+                the wonderful person you are.
+            </p>
+
+            <button class="pink-button" onclick="showPage(4)">
+                Next ♡
+            </button>
+
+            <div class="dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4 -->
+    <section class="page moments-page" id="page4">
+
+        <div class="moments-wrapper">
+
+            <p class="small-text">
+                little memories
+            </p>
+
+            <h2>
+                A Few Favorite Moments
+            </h2>
+
+            <p class="swipe-text">
+                (Swipe the cards)
+            </p>
+
+
+            <!-- PHOTO STACK -->
+            <div class="photo-stack" id="photoStack">
+
+                <div class="photo-card">
+                    <img src="./images/photo1.jpg" alt="Memory 1">
+                    <p>little Susu 🥹</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="./images/photo2.jpg" alt="Memory 2">
+                    <p>beautiful memories ♡</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="./images/photo3.jpg" alt="Memory 3">
+                    <p>that smile ✨</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="./images/photo4.jpg" alt="Memory 4">
+                    <p>another favorite 💗</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="./images/photo5.jpg" alt="Memory 5">
+                    <p>always special 🫶</p>
+                </div>
+
+            </div>
+
+
+            <div class="photo-controls">
+
+                <button onclick="previousPhoto()">‹</button>
+
+                <div class="photo-dots">
+
+                    <span class="photo-dot active"></span>
+                    <span class="photo-dot"></span>
+                    <span class="photo-dot"></span>
+                    <span class="photo-dot"></span>
+                    <span class="photo-dot"></span>
+
+                </div>
+
+                <button onclick="nextPhoto()">›</button>
+
+            </div>
+
+
+            <button class="pink-button" onclick="showPage(5)">
+                Continue 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 5 -->
+    <section class="page heart-page" id="page5">
+
+        <div class="heart-wrapper">
+
+            <p class="small-text">
+                from my heart
+            </p>
+
+            <h2>
+                A Message From My Heart
+            </h2>
+
+            <div class="big-heart">
+                💗
+            </div>
+
+            <div class="envelope" onclick="openLetter()">
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-body">
+
+                    <div class="letter-preview">
+                        💌
+                        <span>Tap to open</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="tap-text">
+                Tap the envelope
+            </p>
+
+        </div>
+
+
+        <!-- LETTER -->
+        <div class="letter-modal" id="letterModal">
+
+            <div class="letter-box">
+
+                <button class="close-letter" onclick="closeLetter()">
+                    ×
+                </button>
+
+                <div class="letter-teddy">
+                    🧸
+                </div>
+
+                <h2>
+                    Dear Susu,
+                </h2>
+
+                <p>
+                    Happy Birthday to someone who makes life a little brighter just by being there.
+                </p>
+
+                <p>
+                    I hope this new year of your life brings you lots of happiness, beautiful memories and countless reasons to smile.
+                </p>
+
+                <p>
+                    Thank you for all the little moments, laughs and memories that make everything so special.
+                </p>
+
+                <p>
+                    Always keep smiling and keep being the amazing person you are. ♡
+                </p>
+
+                <div class="signature">
+                    With lots of love,<br>
+                    💗
+                </div>
+
+                <button class="pink-button" onclick="goToFinal()">
+                    One last surprise ✨
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 6 -->
+    <section class="page final-page" id="page6">
+
+        <div class="final-content">
+
+            <div class="floating-hearts">
+                ♡ ♥ ♡ ♥ ♡
+            </div>
+
+            <div class="final-heart">
+                💗
+            </div>
+
+            <p class="small-text">
+                one last thing...
+            </p>
+
+            <h2>
+                Love you<br>
+                &amp; miss you
+            </h2>
+
+            <p class="final-name">
+                Happy Birthday, Susu 🫶
+            </p>
+
+            <p class="final-message">
+                No matter how many birthdays come and go,<br>
+                you will always be someone special. ♡
+            </p>
+
+            <button class="pink-button" onclick="restartWebsite()">
+                Replay the surprise ↻
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
